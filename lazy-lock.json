@@ -12,5 +12,6 @@
   "nvim-lspconfig": { "branch": "master", "commit": "0cbf919e49c664a0b189a6b08a7da03996b4c3eb" },
   "onedarkpro.nvim": { "branch": "main", "commit": "28fa8ca85452081c3261103167611faecf99843c" },
   "plenary.nvim": { "branch": "master", "commit": "253d34830709d690f013daf2853a9d21ad7accab" },
-  "telescope.nvim": { "branch": "master", "commit": "a3f17d3baf70df58b9d3544ea30abe52a7a832c2" }
+  "telescope-ui-select.nvim": { "branch": "master", "commit": "62ea5e58c7bbe191297b983a9e7e89420f581369" },
+  "telescope.nvim": { "branch": "master", "commit": "a3f17d3baf70df58b9d3544ea30abe52a7a832c2" },
 }
