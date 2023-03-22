@@ -8,6 +8,7 @@ local setup_keymap = function()
             r = { '<cmd>Telescope oldfiles<cr>', 'Open Recent File' },
             n = { '<cmd>enew<cr>', 'New' },
             s = { '<cmd>w<cr>', 'Save' },
+            t = { name = 'File Type specific' }
         },
         c = {
             name = 'Code',
