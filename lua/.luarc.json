@@ -1,0 +1,27 @@
+{
+    "workspace.library": [
+        "/home/falk/.local/share/nvim/lazy/neodev.nvim/types/stable",
+        "/usr/share/nvim/runtime/lua",
+        "/home/falk/.local/share/nvim/lazy/nvim-cmp/lua",
+        "/home/falk/.local/share/nvim/lazy/neodev.nvim/lua",
+        "/home/falk/.local/share/nvim/lazy/cmp-nvim-lsp/lua",
+        "/home/falk/.local/share/nvim/lazy/nvim-lspconfig/lua",
+        "/home/falk/.local/share/nvim/lazy/cmp-buffer/lua",
+        "/home/falk/.local/share/nvim/lazy/telescope.nvim/lua",
+        "/home/falk/.local/share/nvim/lazy/mason.nvim/lua",
+        "/home/falk/.local/share/nvim/lazy/cmp-path/lua",
+        "/home/falk/.local/share/nvim/lazy/lsp-format.nvim/lua",
+        "/home/falk/.local/share/nvim/lazy/cmp_luasnip/lua",
+        "/home/falk/.local/share/nvim/lazy/lazy.nvim/lua",
+        "/home/falk/.local/share/nvim/lazy/plenary.nvim/lua",
+        "/home/falk/.local/share/nvim/lazy/mason-lspconfig.nvim/lua",
+        "/home/falk/.local/share/nvim/lazy/onedarkpro.nvim/lua",
+        "/home/falk/.local/share/nvim/lazy/LuaSnip/lua",
+        "/home/falk/.local/share/nvim/lazy/toggleterm.nvim/lua",
+        "/home/falk/.local/share/nvim/lazy/telescope-ui-select.nvim/lua",
+        "/home/falk/.local/share/nvim/lazy/which-key.nvim/lua",
+        "/home/falk/.config/nvim/lua",
+        "${3rd}/luv/library",
+        "${3rd}/luassert/library"
+    ]
+}

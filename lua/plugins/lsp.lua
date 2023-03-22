@@ -1,4 +1,6 @@
 local settings = function()
+    local neodev = require 'neodev'
+    neodev.setup {}
     local lspconfig = require 'lspconfig'
     local lspformat = require 'lsp-format'
     return {
@@ -8,6 +10,15 @@ local settings = function()
         },
         denols = {
             root_dir = lspconfig.util.root_pattern('deno.json', 'deno.jsonc'),
+        },
+        lua_ls = {
+            settings = {
+                Lua = {
+                    completion = {
+                        callSnippet = 'Replace',
+                    },
+                },
+            },
         },
         default = {
             on_attach = lspformat.on_attach
@@ -37,11 +48,15 @@ end
 
 return {
     {
+        'folke/neodev.nvim',
+    },
+    {
         'neovim/nvim-lspconfig',
         dependencies = {
             'williamboman/mason.nvim',
             'lukas-reineke/lsp-format.nvim',
             'williamboman/mason-lspconfig.nvim',
+            'folke/neodev.nvim',
         },
         config = config,
     },
