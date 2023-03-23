@@ -20,6 +20,13 @@ local settings = function()
                 },
             },
         },
+        yamlls = {
+            settings = {
+                yaml = {
+                    keyOrdering = false,
+                },
+            },
+        },
         default = {
             on_attach = lspformat.on_attach
         }
