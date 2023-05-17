@@ -13,7 +13,7 @@ ls.add_snippets("tex", {
         t "\\begin{",
         i(1),
         t { "}", "  " },
-        i(2),
+        i(0),
         t { "", "\\end{" },
         f(copy, 1),
         t "}"
