@@ -22,7 +22,7 @@ local setup_keymap = function()
             w = { function() require 'telescope'.extensions.git_worktree.git_worktrees() end, 'Git Worktrees' },
             W = { function() require 'telescope'.extensions.git_worktree.create_git_worktree() end, 'Git Worktrees' },
         },
-        K = { vim.lsp.buf.hover, 'Hover symbol' },
+        k = { vim.lsp.buf.hover, 'Hover symbol' },
         Q = { '<cmd>qa!<cr>', 'Quit All' },
         q = { '<cmd>q!<cr>', 'quit' },
     }, { prefix = '<leader>' })
@@ -30,6 +30,10 @@ local setup_keymap = function()
     which_key.register({
         K = { vim.lsp.buf.hover, 'Hover symbol' },
         ['<f2>'] = { vim.lsp.buf.rename, 'Rename' },
+        g = {
+            d = { vim.lsp.buf.definition, 'Goto definition (lsp)' },
+            D = { vim.lsp.buf.declaration, 'Goto declaration (lsp)' },
+        },
     }, {})
 end
 
