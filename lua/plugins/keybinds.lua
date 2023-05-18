@@ -19,6 +19,7 @@ local setup_keymap = function()
         },
         g = {
             name = 'Git',
+            l = { '<cmd>LazyGit<cr>', 'lazygit' },
             w = { function() require 'telescope'.extensions.git_worktree.git_worktrees() end, 'Git Worktrees' },
             W = { function() require 'telescope'.extensions.git_worktree.create_git_worktree() end, 'Git Worktrees' },
         },
