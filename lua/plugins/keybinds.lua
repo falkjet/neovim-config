@@ -35,6 +35,7 @@ local setup_keymap = function()
             d = { vim.lsp.buf.definition, 'Goto definition (lsp)' },
             D = { vim.lsp.buf.declaration, 'Goto declaration (lsp)' },
         },
+        ['<c-c>'] = { '<cmd>Telescope neoclip<cr>', 'Clipboard history' },
     }, {})
 end
 

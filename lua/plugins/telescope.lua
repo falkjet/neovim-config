@@ -13,4 +13,14 @@ return {
             telescope.load_extension("ui-select")
         end
     },
+    {
+        'AckslD/nvim-neoclip.lua',
+        dependencies = {
+            'telescope.nvim',
+        },
+        init = function()
+            require 'telescope'.load_extension('neoclip')
+        end,
+        config = true,
+    }
 }
