@@ -36,6 +36,14 @@ local setup_keymap = function()
             D = { vim.lsp.buf.declaration, 'Goto declaration (lsp)' },
         },
         ['<c-c>'] = { '<cmd>Telescope neoclip<cr>', 'Clipboard history' },
+        ['<c-b>'] = {
+            function()
+                if string.find(vim.fn.expand('%'), 'NERD_tree_%d*') then
+                    vim.cmd[[ NERDTreeToggle ]]
+                else
+                    vim.cmd[[ NERDTreeFocus ]]
+                end
+            end, 'NERD Tree' }
     }, {})
 end
 
