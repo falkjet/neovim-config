@@ -26,6 +26,11 @@ local setup_keymap = function()
         k = { vim.lsp.buf.hover, 'Hover symbol' },
         Q = { '<cmd>qa!<cr>', 'Quit All' },
         q = { '<cmd>q!<cr>', 'quit' },
+        b = {
+            name = 'Buffer',
+            b = { '<cmd>Telescope buffers<cr>', 'Switch buffer' },
+        },
+        a = { function() vim.lsp.buf.code_action {} end, 'Code action' }
     }, { prefix = '<leader>' })
 
     which_key.register({
