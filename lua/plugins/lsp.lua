@@ -51,6 +51,21 @@ local config = function()
             lspconfig[server].setup(s)
         end
     })
+
+    local null_ls = require 'null-ls'
+
+    null_ls.setup {
+        on_attach = function(client)
+            require 'lsp-format'.on_attach(client)
+        end,
+        sources = {
+            null_ls.builtins.formatting.ocamlformat,
+            null_ls.builtins.formatting.prettier,
+            null_ls.builtins.formatting.autopep8,
+            null_ls.builtins.diagnostics.mypy,
+            null_ls.builtins.formatting.isort,
+        }
+    }
 end
 
 return {
@@ -64,6 +79,7 @@ return {
             'lukas-reineke/lsp-format.nvim',
             'williamboman/mason-lspconfig.nvim',
             'folke/neodev.nvim',
+            'jose-elias-alvarez/null-ls.nvim',
         },
         config = config,
     },
