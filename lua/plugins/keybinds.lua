@@ -39,9 +39,9 @@ local setup_keymap = function()
         ['<c-b>'] = {
             function()
                 if string.find(vim.fn.expand('%'), 'NERD_tree_%d*') then
-                    vim.cmd[[ NERDTreeToggle ]]
+                    vim.cmd [[ NERDTreeToggle ]]
                 else
-                    vim.cmd[[ NERDTreeFocus ]]
+                    vim.cmd [[ NERDTreeFocus ]]
                 end
             end, 'NERD Tree' }
     }, {})

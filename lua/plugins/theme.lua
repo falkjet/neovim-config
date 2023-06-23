@@ -3,9 +3,9 @@ return {
         'olimorris/onedarkpro.nvim',
         priority = 1000,
         config = function()
-            require "onedarkpro".setup{
+            require "onedarkpro".setup {
                 highlights = {
-                    Comment = { fg = "#ffcc00", style="bold" },
+                    Comment = { fg = "#ffcc00", style = "bold" },
                 },
                 colors = {
                     yellow = "#D5B06B",
@@ -22,7 +22,7 @@ return {
                     ['faint-gray'] = "#ABB2BF",
                     ['light-gray'] = "#636C6E",
                     linenr = "#282C34",
-                    bg='#16181A'
+                    bg = '#16181A'
                 }
             }
         end,
