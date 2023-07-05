@@ -57,7 +57,19 @@ local setup_keymap = function()
         ['['] = {
             d = { vim.diagnostic.goto_prev, "Goto previous diagnostic" },
         },
+        m = {
+            r = { '<Plug>Csurround', 'Surround replace' },
+            d = { '<Plug>Dsurround', 'Surround delete' },
+        },
     }, {})
+
+    which_key.register({
+        m = {
+            s = { '<Plug>VSurround', 'Surround' },
+        }
+    }, {
+        mode = 'v',
+    })
 end
 
 
