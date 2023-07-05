@@ -8,6 +8,8 @@ local setup_keymap = function()
             r = { '<cmd>Telescope oldfiles<cr>', 'Open Recent File' },
             n = { '<cmd>enew<cr>', 'New' },
             s = { '<cmd>w<cr>', 'Save' },
+            c = { function() require 'telescope.builtin'.find_files { cwd = vim.fn.stdpath 'config' } end,
+                'Open config file' },
             t = { name = 'File Type specific' }
         },
         c = {
