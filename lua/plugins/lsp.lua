@@ -7,7 +7,8 @@ local settings = function()
         tsserver = {
             root_dir = lspconfig.util.root_pattern('package.json'),
             single_file_support = false,
-            on_attach = function()
+            on_attach = function(client)
+                client.server_capabilities.semanticTokensProvider = nil
             end,
         },
         denols = {
@@ -30,7 +31,10 @@ local settings = function()
             },
         },
         default = {
-            on_attach = lspformat.on_attach
+            on_attach = function(client)
+                lspformat.on_attach(client)
+                client.server_capabilities.semanticTokensProvider = nil
+            end,
         }
     }
 end
