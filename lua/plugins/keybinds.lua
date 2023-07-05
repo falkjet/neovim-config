@@ -50,7 +50,13 @@ local setup_keymap = function()
                 else
                     vim.cmd [[ NERDTreeFocus ]]
                 end
-            end, 'NERD Tree' }
+            end, 'NERD Tree' },
+        [']'] = {
+            d = { vim.diagnostic.goto_next, "Goto next diagnostic" },
+        },
+        ['['] = {
+            d = { vim.diagnostic.goto_prev, "Goto previous diagnostic" },
+        },
     }, {})
 end
 
