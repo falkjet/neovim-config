@@ -77,6 +77,7 @@ local config = function()
             null_ls.builtins.formatting.autopep8,
             null_ls.builtins.diagnostics.mypy,
             null_ls.builtins.formatting.isort,
+            null_ls.builtins.formatting.goimports,
         }
     }
 
