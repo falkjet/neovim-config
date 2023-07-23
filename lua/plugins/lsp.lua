@@ -20,6 +20,13 @@ local settings = function()
                     completion = {
                         callSnippet = 'Replace',
                     },
+                    workspace = {
+                        library = {
+                            vim.fn.expand '$VIMRUNTIME',
+                            require 'neodev.config'.types(),
+                            '${3rd}/luv/library',
+                        }
+                    },
                 },
             },
         },
