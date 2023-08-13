@@ -84,6 +84,7 @@ local config = function()
             null_ls.builtins.diagnostics.mypy,
             null_ls.builtins.formatting.isort,
             null_ls.builtins.formatting.goimports,
+            null_ls.builtins.formatting.djlint,
         }
     }
 
