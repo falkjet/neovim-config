@@ -5,8 +5,10 @@ local settings = function()
     local lspformat = require 'lsp-format'
     return {
         emmet_ls = {
-            filetypes = { "html", "javascript", "typescript", "javascriptreact", "typescriptreact", "svelte",
-                "gohtmltmpl" }
+            filetypes = {
+                "html", "javascript", "typescript", "javascriptreact",
+                "typescriptreact", "svelte", "gohtmltmpl", "htmldjango",
+            }
         },
         tsserver = {
             root_dir = lspconfig.util.root_pattern('package.json'),
