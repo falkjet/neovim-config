@@ -22,3 +22,5 @@ vim.opt.tabstop = 4
 vim.opt.expandtab = true
 vim.opt.signcolumn = "yes"
 vim.opt.number = true
+
+vim.cmd [[autocmd FileType help noremap <buffer> q <cmd>q<cr>]]
