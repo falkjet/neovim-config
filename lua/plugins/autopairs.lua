@@ -1,10 +1,10 @@
 return {
     {
         'windwp/nvim-autopairs',
-        config = function(opts)
+        config = function(pluginopts)
             local npairs = require 'nvim-autopairs'
             local Rule   = require 'nvim-autopairs.rule'
-            npairs.setup(opts)
+            npairs.setup(pluginopts)
 
             local brackets = { { '(', ')' }, { '[', ']' }, { '{', '}' } }
             npairs.add_rules {
