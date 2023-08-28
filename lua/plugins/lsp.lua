@@ -91,6 +91,9 @@ local config = function()
             null_ls.builtins.formatting.isort,
             null_ls.builtins.formatting.goimports,
             null_ls.builtins.formatting.djlint,
+            null_ls.builtins.formatting.sqlfluff.with({
+                extra_args = { "--dialect", "postgres" }, -- change to your dialect
+            }),
         }
     }
 
