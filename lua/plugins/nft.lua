@@ -1,0 +1,5 @@
+return {
+    {
+        'nfnty/vim-nftables'
+    }
+}
