@@ -10,6 +10,12 @@ local settings = function()
                 "typescriptreact", "svelte", "gohtmltmpl", "htmldjango",
             }
         },
+        unocss = {
+            filetypes = {
+                "htmldjango", "gohtmltmpl", "html", "javascriptreact",
+                "rescript", "typescriptreact", "vue", "svelte"
+            }
+        },
         tsserver = {
             root_dir = lspconfig.util.root_pattern('package.json'),
             single_file_support = false,
