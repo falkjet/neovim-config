@@ -24,3 +24,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.number = true
 
 vim.cmd [[autocmd FileType help noremap <buffer> q <cmd>q<cr>]]
+
+require 'keybinds'
+require 'lsp'
+require 'completion'
