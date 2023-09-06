@@ -53,6 +53,7 @@ which_key.register({
     g = {
         d = { vim.lsp.buf.definition, 'Goto definition (lsp)' },
         D = { vim.lsp.buf.declaration, 'Goto declaration (lsp)' },
+        i = { require 'telescope.builtin'.lsp_implementations, 'Goto implementation (lsp)' },
     },
     ['<c-c>'] = { '<cmd>Telescope neoclip<cr>', 'Clipboard history' },
     ['<c-b>'] = {
