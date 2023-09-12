@@ -6,7 +6,7 @@ local settings = {
     emmet_ls = {
         filetypes = {
             "html", "javascript", "typescript", "javascriptreact",
-            "typescriptreact", "svelte", "gohtmltmpl", "htmldjango",
+            "typescriptreact", "svelte", "gohtmltmpl", "htmldjango", "vue",
         }
     },
     unocss = {
