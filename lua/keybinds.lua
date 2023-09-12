@@ -6,6 +6,9 @@ local harpoon_cmdui = require 'harpoon.cmd-ui'
 local toggleterm = require 'toggleterm'
 local toggleterm_ui = require 'toggleterm.ui'
 
+
+vim.keymap.set("t", "<s-space>", "<space>")
+
 which_key.register({
     f = {
         name = 'File',
