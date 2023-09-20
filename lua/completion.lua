@@ -2,13 +2,15 @@ local luasnip = require 'luasnip'
 local cmp = require 'cmp'
 local types = require 'cmp.types'
 
-local on_tab = cmp.mapping(function()
+local snippet_next = cmp.mapping(function(fallback)
     if luasnip.jumpable(1) then
         luasnip.jump(1)
+    else
+        fallback()
     end
 end, { 'i', 's' })
 
-local on_shift_tab = cmp.mapping(function(fallback)
+local snippet_prev = cmp.mapping(function(fallback)
     if luasnip.jumpable(-1) then
         luasnip.jump(-1)
     else
@@ -33,6 +35,8 @@ cmp.setup {
         ['<c-f>'] = cmp.mapping.scroll_docs(4),
         ['<c-space>'] = cmp.mapping.complete(),
         ['<tab>'] = cmp.mapping.confirm { select = true },
+        ['<c-n>'] = snippet_next,
+        ['<c-p>'] = snippet_prev,
     },
     sources = cmp.config.sources({
         { name = 'luasnip' },
