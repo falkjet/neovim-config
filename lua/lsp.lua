@@ -79,6 +79,13 @@ mason_lspconfig.setup_handlers({
     end
 })
 
+lspconfig.ocamllsp.setup {
+    on_attach = function(client)
+        lspformat.on_attach(client)
+        client.server_capabilities.semanticTokensProvider = nil
+    end
+}
+
 lspconfig.templ.setup {
     on_attach = function(client)
         lspformat.on_attach(client)
