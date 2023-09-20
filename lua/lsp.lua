@@ -1,12 +1,14 @@
 local mason_lspconfig = require 'mason-lspconfig'
 local lspconfig = require 'lspconfig'
 local lspformat = require 'lsp-format'
+local lspconfig_configs = require 'lspconfig.configs'
 
 local settings = {
     emmet_ls = {
         filetypes = {
             "html", "javascript", "typescript", "javascriptreact",
             "typescriptreact", "svelte", "gohtmltmpl", "htmldjango", "vue",
+            "templ",
         }
     },
     unocss = {
@@ -56,6 +58,16 @@ local settings = {
     }
 }
 
+lspconfig_configs.templ = {
+    default_config = {
+        cmd = { "templ", "lsp" },
+        filetypes = { "templ" },
+        root_dir = lspconfig.util.root_pattern("go.mod", ".git"),
+        settings = {},
+    }
+}
+
+
 mason_lspconfig.setup_handlers({
     function(server)
         local s = {}
@@ -67,6 +79,12 @@ mason_lspconfig.setup_handlers({
     end
 })
 
+lspconfig.templ.setup {
+    on_attach = function(client)
+        lspformat.on_attach(client)
+        client.server_capabilities.semanticTokensProvider = nil
+    end
+}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {
