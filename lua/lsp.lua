@@ -9,7 +9,10 @@ local settings = {
             "html", "javascript", "typescript", "javascriptreact",
             "typescriptreact", "svelte", "gohtmltmpl", "htmldjango", "vue",
             "templ",
-        }
+        },
+        init_options = {
+            jsx = { options = { ['markup.attributes'] = { class = 'class' } } },
+        },
     },
     unocss = {
         filetypes = {
