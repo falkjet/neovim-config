@@ -10,6 +10,7 @@ local toggleterm_ui = require 'toggleterm.ui'
 vim.keymap.set("t", "<s-space>", "<space>")
 
 which_key.register({
+    [','] = { '<cmd>Telescope buffers<cr>', 'Switch buffer' },
     f = {
         name = 'File',
         f = { '<cmd>Telescope find_files<cr>', 'Open' },
