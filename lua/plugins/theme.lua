@@ -26,10 +26,14 @@ return {
                 }
             }
         end,
+    },
+    {
+        'folke/tokyonight.nvim',
+        priority = 1000,
         init = function()
             vim.cmd [[
-                colorscheme onedark
+                colorscheme tokyonight-night
             ]]
         end
-    }
+    },
 }
