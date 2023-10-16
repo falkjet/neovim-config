@@ -8,7 +8,7 @@ local settings = {
         filetypes = {
             "html", "javascript", "typescript", "javascriptreact",
             "typescriptreact", "svelte", "gohtmltmpl", "htmldjango", "vue",
-            "templ",
+            "templ", "astro",
         },
         init_options = {
             jsx = { options = { ['markup.attributes'] = { class = 'class' } } },
